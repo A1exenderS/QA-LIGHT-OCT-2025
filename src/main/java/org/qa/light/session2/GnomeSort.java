@@ -4,7 +4,7 @@ import java.util.Random;
 
 //TODO: Write bubble sort
 
-public class GomeSort {
+public class GnomeSort {
 
     public static void main(String[] args) {
         /*
