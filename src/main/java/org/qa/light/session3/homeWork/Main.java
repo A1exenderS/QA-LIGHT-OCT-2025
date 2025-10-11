@@ -7,11 +7,11 @@ public class Main {
         Android xiaomi = new Android();
         IOS iPhoneAir = new IOS();
 
-        phonesActions(xiaomi,"Garfield");
+        phoneActions(xiaomi,"Garfield");
         System.out.println(" ");
-        phonesActions(iPhoneAir,"Mary");
+        phoneActions(iPhoneAir,"Mary");
     }
-    public static void phonesActions(IPhone phoneType, String contact) {
+    public static void phoneActions(IPhone phoneType, String contact) {
         phoneType.unlockScreen();
         phoneType.callTo(contact);
         phoneType.blockScreen();
