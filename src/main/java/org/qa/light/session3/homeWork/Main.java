@@ -1,18 +1,19 @@
 package org.qa.light.session3.homeWork;
 
+import org.qa.light.session3.ICar;
+
 public class Main {
     public static void main(String[] args) {
         Android xiaomi = new Android();
         IOS iPhoneAir = new IOS();
 
-        xiaomi.unlockScreen();
-        xiaomi.callTo("Garfield");
-        xiaomi.blockScreen();
-
+        phonesActions(xiaomi,"Garfield");
         System.out.println(" ");
-
-        iPhoneAir.unlockScreen();
-        iPhoneAir.callTo("Eleonore");
-        iPhoneAir.blockScreen();
+        phonesActions(iPhoneAir,"Mary");
+    }
+    public static void phonesActions(IPhone phoneType, String contact) {
+        phoneType.unlockScreen();
+        phoneType.callTo(contact);
+        phoneType.blockScreen();
     }
 }
