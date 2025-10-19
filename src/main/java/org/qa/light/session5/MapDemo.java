@@ -1,11 +1,6 @@
 package org.qa.light.session5;
 
-import org.qa.light.session3.Ford;
-import org.qa.light.session4.Boat;
-
-import java.util.Collection;
 import java.util.HashMap;
-import java.util.Hashtable;
 import java.util.Map;
 
 public class MapDemo {
@@ -33,7 +28,5 @@ public class MapDemo {
         hashMap.replace("key_3", null);
 
         System.out.println(hashMap.size());
-
-
     }
 }
