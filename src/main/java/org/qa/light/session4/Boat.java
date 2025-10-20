@@ -5,6 +5,7 @@ package org.qa.light.session4;
 //TODO: create android/ios with null model and/or hascode,
 // and try to handle exceptions if they appear
 
+
 public class Boat {
 
     public String color;
