@@ -1,4 +1,4 @@
-package org.qa.light.session6_homeWork;
+package org.qa.light.session6.homeWork;
 
 public class Owner {
     public String name;
