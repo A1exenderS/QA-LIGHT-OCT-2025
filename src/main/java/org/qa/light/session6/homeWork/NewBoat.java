@@ -2,12 +2,12 @@ package org.qa.light.session6.homeWork;
 
 import java.util.Set;
 
-public class newBoat {
+public class NewBoat {
 
     public String name;
     public Set<Owner> owners;
 
-    public newBoat(String name, Set<Owner> owners) {
+    public NewBoat(String name, Set<Owner> owners) {
         this.name = name;
         this.owners = owners;
     }

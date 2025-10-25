@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import static org.qa.light.session6.homeWork.hw_main.createBoat;
+import static org.qa.light.session6.homeWork.HomeWorkMain.createBoat;
 
 //TODO: each boat has one or more owners -> check this with assert
 //TODO: each owner must be unique
@@ -23,14 +23,15 @@ public class HomeWorkTest {
     @Test
     public void checkBoatHasAtLeastOneOwner() {
 
-        newBoat testBoat = createBoat();
+        NewBoat testBoat = createBoat();
 
         Assert.assertNotNull(testBoat.owners, "Owners list is NULL :(((");
         Assert.assertFalse(testBoat.owners.isEmpty(), "Owners list is empty :(((");
+        Assert.assertTrue(testBoat.owners.size() >= 1, "Owners list is empty :(((");
     }
 
     @Test(dataProvider = "newBoats")
-    public void checkBoatCreationWithParams(newBoat boat) {
+    public void checkBoatCreationWithParams(NewBoat boat) {
 
         Assert.assertFalse(boat == null, "Boat is not created");
         Assert.assertFalse(boat.name == null, "Boat name is not created");

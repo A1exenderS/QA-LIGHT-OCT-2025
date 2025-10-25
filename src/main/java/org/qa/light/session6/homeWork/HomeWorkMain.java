@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
-public class hw_main {
+public class HomeWorkMain {
     static Faker faker = new Faker();
     static int amoutOfBoats = new Random().nextInt(10);
 
@@ -25,7 +25,7 @@ public class hw_main {
         return new Owner(name);
     }
 
-    public static newBoat createBoat() {
+    public static NewBoat createBoat() {
 
         String boatName = generateBoatName();
 
@@ -35,14 +35,14 @@ public class hw_main {
         for (int i = 0; i < numberOfOwners; i++) {
             owners.add(generateOwnerName());
         }
-        return new newBoat(boatName, owners);
+        return new NewBoat(boatName, owners);
     }
 
-    public static Set<newBoat> printBoatWithOneOwner(int amountOfBoats) {
-        Set<newBoat> squadronOfBoats = new HashSet<>();
+    public static Set<NewBoat> printBoatWithOneOwner(int amountOfBoats) {
+        Set<NewBoat> squadronOfBoats = new HashSet<>();
         for (int i = 0; i < amountOfBoats; i++) {
             System.out.println("------------------------------");
-            newBoat boat = createBoat();
+            NewBoat boat = createBoat();
             System.out.println(boat);
             if (boat.owners.size() == 1) {
                 squadronOfBoats.add(boat);
