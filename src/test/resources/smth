@@ -1,0 +1,11 @@
+html > body > div > div > div > img+
+                  > div > span > img
+            > div > div > div > img+
+                  > div > div > img+
+            > div > div > img+
+            > div > div > span > img
+            > div > span > div > img
+                               > a
+
+/html/body/div/div/div/img
+//div/img/../../
