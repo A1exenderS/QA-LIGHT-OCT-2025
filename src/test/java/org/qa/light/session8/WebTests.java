@@ -13,12 +13,6 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.List;
 
-//TODO: Make allo.ua page object:
-//TODO: - go to store page
-//TODO: - execute search
-//TODO: - print device name, price and screen type (use hover to see it)
-// by index in search results index 1-3
-
 
 public class WebTests {
     private WebDriver driver;
