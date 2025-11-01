@@ -48,4 +48,25 @@ public class RestTests {
                 .contentType(ContentType.JSON)
                 .body("results.gender", Matchers.hasItem("female"));
     }
+
+    @Test
+    public void restTestsHomeWork() {
+        ValidatableResponse r = RestAssured.given()
+                .queryParam("inc", "gender,name,nat,location")
+                .queryParam("results", "3")
+                .queryParam("noinfo")
+                .baseUri("https://randomuser.me/")
+                .basePath("/api")
+                .get()
+                .then()
+                .statusCode(200)
+                .contentType(ContentType.JSON)
+                .body("results[0].location.street.name", Matchers.notNullValue())
+                .body("results[0].location.street.number", Matchers.notNullValue());
+
+        r.extract().response().prettyPrint();
+
+    }
+
+
 }
