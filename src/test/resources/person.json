@@ -1,0 +1,31 @@
+{
+  "results": [
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Lucas",
+        "last": "Jørgensen"
+      },
+      "nat": "DK"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Ievgen",
+        "last": "Ratushniy"
+      },
+      "nat": "UA"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "Miss",
+        "first": "Olava",
+        "last": "Skjolden"
+      },
+      "nat": "NO"
+    }
+  ]
+}
