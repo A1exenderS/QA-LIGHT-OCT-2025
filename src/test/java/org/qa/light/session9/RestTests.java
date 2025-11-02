@@ -8,6 +8,11 @@ import io.restassured.specification.RequestSpecification;
 import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
 
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+import static org.hamcrest.Matchers.hasItem;
+
 //TODO: add location to request
 //TODO: Validate that street number and name are not null for 1st person generated
 
