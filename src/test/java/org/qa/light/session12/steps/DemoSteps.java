@@ -1,23 +1,32 @@
 package org.qa.light.session12.steps;
 
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import org.qa.light.session12.AgentActions;
 
 public class DemoSteps {
 
-    @Given("I request 3 random people from API")
-    public void iRequest3RandomPeopleFromAPI() {
-        System.out.println("I request 3 random people from API");
+    @Given("Print this number {int}")
+    public void printThisNumber(int number) {
+        System.out.println(number);
     }
 
-    @When("I store those people in DB")
-    public void iStoreThosePeopleInDB() {
-        System.out.println("I store those people in DB");
+    @Given("Print this string {string}")
+    public void printThisString(String string) {
+        System.out.println(string);
     }
 
-    @Then("Then DB has 3 more entries")
-    public void thenDBHas3MoreEntries() {
-        System.out.println("Then DB has 3 more entries");
+    @Given("Support agent executes {}")
+    public void supportAgentExecutes(AgentActions actions) {
+        switch (actions) {
+            case UPDATE_USER_DATA:
+                System.out.println("Agent updates user data");
+                break;
+            case DELETE_USER_DATA:
+                System.out.println("Agent deletes user data");
+                break;
+            case REGISTER_NEW_USER_DATA:
+                System.out.println("Agent registers new user data");
+                break;
+        }
     }
 }
