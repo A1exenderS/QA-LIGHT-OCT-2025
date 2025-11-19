@@ -39,7 +39,7 @@ public class PhonesToDBTest {
         StorePage storePage = new StorePage(driver);
 
         mainPage.load();
-        mainPage.executeSearch("Google");
+        mainPage.executeSearch("Samsung");
         List<WebElement> searchResults = storePage.checkSearchResults();
         Assert.assertTrue(searchResults.size() >= 3, "We have some troubles with iPhones search");
         List<HoveredCardItem> hoveredCardItems = storePage.printHoveredCardData(searchResults);
