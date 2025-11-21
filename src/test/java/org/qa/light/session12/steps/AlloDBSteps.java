@@ -13,7 +13,8 @@ public class AlloDBSteps {
     public static Connection conn;
 
     @Then("the system saves each hovered item into the Phones database table")
-    public void storeItemsDataToDB(List<HoveredCardItem> hoveredCardItems) throws SQLException {
+    public void storeItemsDataToDB() throws SQLException {
+        List<HoveredCardItem> hoveredCardItems = AlloStorePageSteps.hoveredCardItems;
         PreparedStatement preparedStatement = conn.prepareStatement(
                 "INSERT INTO Phones (DeviceName, DevicePrice, DeviceScreenSize) VALUES (?,?,?)"
         );

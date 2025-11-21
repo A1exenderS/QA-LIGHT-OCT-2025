@@ -19,7 +19,7 @@ import java.sql.SQLException;
 
 @CucumberOptions(
         glue = "org.qa.light.session12.steps",
-        features = "src/test/resources/features/demo",
+        features = "src/test/resources/features/hw",
         plugin = {"pretty"}
 )
 public class CucumberRunner extends AbstractTestNGCucumberTests {
