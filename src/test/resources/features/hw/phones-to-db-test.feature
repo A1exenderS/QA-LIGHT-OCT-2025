@@ -6,4 +6,3 @@ Feature: collect device data and store it into the database
     Then at least 3 search results should be displayed
     When the user hovers the first 3 product cards
     Then the system saves each hovered item into the Phones database table
-  cd
