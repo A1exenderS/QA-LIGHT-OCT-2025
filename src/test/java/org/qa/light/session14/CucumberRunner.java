@@ -44,7 +44,7 @@ public class CucumberRunner extends AbstractTestNGCucumberTests {
         WebSteps.cloudFlarePage = new CloudFlarePage(driver);
 
         conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/db", "user", "password");
+                "jdbc:mysql://mysql-db-1:3306/db", "user", "password");
         DBSteps.conn = conn;
         DBStepsV2.conn = conn;
     }
