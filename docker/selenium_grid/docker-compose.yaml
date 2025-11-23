@@ -1,3 +1,14 @@
+# List available networks:
+# docker network ls
+# Create new docker network:
+# docker network create qa-light-net
+# Check network state:
+# docker network inspect qa-light-net
+# Add container to network:
+# docker network connect qa-light-net [container_name]
+# Container names found in:
+# docker ps
+
 version: "3"
 
 services:

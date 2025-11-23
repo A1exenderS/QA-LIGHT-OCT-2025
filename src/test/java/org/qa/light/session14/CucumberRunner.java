@@ -37,7 +37,7 @@ public class CucumberRunner extends AbstractTestNGCucumberTests {
     @BeforeSuite
     public void beforeSuite() throws SQLException, MalformedURLException {
         driver = new RemoteWebDriver(
-                new URL("http://localhost:4444/"),
+                new URL("http://selenium-hub:4444/"),
                 new ChromeOptions());
         WebSteps.driver = driver;
         WebSteps.generalPageObject = new GeneralPageObject(driver);
