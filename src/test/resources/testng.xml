@@ -2,7 +2,7 @@
 <suite name="Suite1" verbose="1">
     <test name="My Cucumber Test">
         <classes>
-            <class name="org.qa.light.session12.CucumberRunner"/>
+            <class name="org.qa.light.session14.CucumberRunner"/>
         </classes>
     </test>
 </suite>

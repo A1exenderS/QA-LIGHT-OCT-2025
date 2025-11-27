@@ -1,8 +1,19 @@
+# List available networks:
+# docker network ls
+# Create new docker network:
+# docker network create qa-light-net
+# Check network state:
+# docker network inspect qa-light-net
+# Add container to network:
+# docker network connect qa-light-net [container_name]
+# Container names found in:
+# docker ps
+
 version: "3"
 
 services:
   selenium-hub:
-    image: selenium/hub:4.22.0-20240725
+    image: selenium/hub:4.38.0
     container_name: selenium-hub
     ports:
       - "4442:4442" # Event bus
@@ -10,7 +21,7 @@ services:
       - "4444:4444" # Hub UI and API
 
   chrome:
-    image: selenium/node-chrome:4.22.0-20240725
+    image: selenium/node-chrome:4.38.0
     shm_size: 2gb
     depends_on:
       - selenium-hub
@@ -20,7 +31,7 @@ services:
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
 
   firefox:
-    image: selenium/node-firefox:4.22.0-20240725
+    image: selenium/node-firefox:4.38.0
     shm_size: 2gb
     depends_on:
       - selenium-hub
